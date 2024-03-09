@@ -1,8 +1,11 @@
-import {APP_INITIALIZER, ApplicationConfig} from '@angular/core';
+import {APP_INITIALIZER, ApplicationConfig, isDevMode} from '@angular/core';
 import {provideRouter} from '@angular/router';
 import {initializeApp} from "firebase/app";
 import {getAnalytics} from "firebase/analytics";
 import {routes} from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
+import { TranslocoHttpLoader } from './transloco-loader';
+import { provideTransloco } from '@ngneat/transloco';
 
 const initialize = () => {
   return () => {
@@ -29,6 +32,15 @@ export const appConfig: ApplicationConfig = {
       provide: APP_INITIALIZER,
       useFactory: initialize,
       multi: true,
-    }
+    }, provideHttpClient(), provideTransloco({
+        config: {
+          availableLangs: ['en', 'de', 'ro'],
+          defaultLang: 'de',
+          // Remove this option if your application doesn't support changing language in runtime.
+          reRenderOnLangChange: true,
+          prodMode: !isDevMode(),
+        },
+        loader: TranslocoHttpLoader
+      })
   ]
 };
