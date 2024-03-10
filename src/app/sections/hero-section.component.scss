@@ -1,10 +1,13 @@
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/images/hero-image.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../../assets/images/amalfiCoast.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 80vh;
+  height: 100svh;
+  @media (min-width: 768px) {
+    height: 80svh;
+  }
 }
 
 .hero-text {
@@ -14,4 +17,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+.language-selector{
+  bottom: 80%;
+  left: 50%;
 }

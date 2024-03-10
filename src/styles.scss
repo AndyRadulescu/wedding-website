@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-$backgroundColor: rgb(30 27 75 / 1);
+$backgroundColor: rgb(23 37 84);
 
 body {
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-style: normal;
   background-color: $backgroundColor;
+}
+
+.fancy-text{
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
