@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslocoDirective, TranslocoPipe} from "@ngneat/transloco";
-import {LanguageSelectorComponent} from "./components/language-selector.component";
+import {LanguageSelectorComponent} from "../components/language-selector.component";
 
 @Component({
   selector: 'app-hero-section',

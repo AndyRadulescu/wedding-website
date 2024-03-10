@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {HeroSectionComponent} from "./hero-section.component";
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {HeroSectionComponent} from "./sections/hero-section.component";
 
 @Component({
   selector: 'app-root',
