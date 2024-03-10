@@ -1,0 +1,10 @@
+.circle {
+  border-radius: 50%;
+}
+
+.desktop-card {
+  @media (min-width: 768px) {
+    margin-top: -50px;
+    z-index: 1;
+  }
+}
