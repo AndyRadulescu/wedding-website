@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.fancy-font {
+$backgroundColor: rgb(30 27 75 / 1);
+
+body {
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-style: normal;
+  background-color: $backgroundColor;
 }
