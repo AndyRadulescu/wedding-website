@@ -1,5 +1,8 @@
 <div class="flex flex-row justify-center">
-  <div class="mr-10 cursor-pointer" [ngClass]="{'text-white underline':locale===RO}" (click)="setLocale(RO)">RO</div>
-  <div class="mr-10 cursor-pointer" [ngClass]="{'text-white underline':locale===EN}" (click)="setLocale(EN)">EN</div>
-  <div class="cursor-pointer" [ngClass]="{'text-white underline':locale===DE}" (click)="setLocale(DE)">DE</div>
+  <div class="mr-10 cursor-pointer" [ngClass]="{'text-white underline':locale===RO, 'text-gray-400':locale!=RO}"
+       (click)="setLocale(RO)">RO
+  </div>
+  <div class="cursor-pointer" [ngClass]="{'text-white underline':locale===EN, 'text-gray-400':locale!=EN}"
+       (click)="setLocale(EN)">EN
+  </div>
 </div>

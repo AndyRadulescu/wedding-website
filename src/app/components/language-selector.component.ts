@@ -17,8 +17,7 @@ export class LanguageSelectorComponent {
 
   public EN = 'en';
   public RO = 'ro';
-  public DE = 'de';
-  public locale = this.EN;
+  public locale = this.RO;
 
   public setLocale(locale: string) {
     this.locale = locale;

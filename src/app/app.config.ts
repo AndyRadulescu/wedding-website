@@ -34,8 +34,8 @@ export const appConfig: ApplicationConfig = {
       multi: true,
     }, provideHttpClient(), provideTransloco({
         config: {
-          availableLangs: ['en', 'de', 'ro'],
-          defaultLang: 'en',
+          availableLangs: ['en', 'ro'],
+          defaultLang: 'ro',
           // Remove this option if your application doesn't support changing language in runtime.
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),
