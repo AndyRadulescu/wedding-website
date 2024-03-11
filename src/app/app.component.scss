@@ -1,4 +1,4 @@
 $backgroundColor: rgb(23 37 84);
 .gradient {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .3)), $backgroundColor;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .2)), $backgroundColor;
 }
