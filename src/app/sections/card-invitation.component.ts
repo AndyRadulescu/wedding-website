@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({
-  selector: 'app-map-location',
+  selector: 'card-invitation',
   standalone: true,
   imports: [
     NgOptimizedImage

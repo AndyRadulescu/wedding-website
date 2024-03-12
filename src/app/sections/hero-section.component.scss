@@ -3,12 +3,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  scale: 1;
-  z-index: -1;
   animation: hero-image-animation linear forwards;
   animation-timeline: view();
   animation-range: exit;
-
 }
 
 .header-content {
@@ -18,7 +15,7 @@
 }
 
 @keyframes fade-out {
-  to {
+  75%, 100% {
     opacity: 0
   }
 }
@@ -28,6 +25,7 @@
     opacity: 1
   }
   85%, 100% {
-    opacity: 0; scale: 3;
+    opacity: 0;
+    scale: 3;
   }
 }
