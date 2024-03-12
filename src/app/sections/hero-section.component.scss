@@ -3,29 +3,32 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: hero-image-animation linear forwards;
-  animation-timeline: view();
-  animation-range: exit;
 }
 
-.header-content {
-  animation: fade-out linear;
-  animation-timeline: view();
-  animation-range: exit;
-}
-
-@keyframes fade-out {
-  75%, 100% {
-    opacity: 0
+@media (min-width: 768px) {
+  .hero-image {
+    animation: hero-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
   }
-}
-
-@keyframes hero-image-animation {
-  25% {
-    opacity: 1
+  .header-content {
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit;
   }
-  85%, 100% {
-    opacity: 0;
-    scale: 3;
+  @keyframes fade-out {
+    75%, 100% {
+      opacity: 0
+    }
+  }
+
+  @keyframes hero-image-animation {
+    25% {
+      opacity: 1
+    }
+    85%, 100% {
+      opacity: 0;
+      scale: 3;
+    }
   }
 }
