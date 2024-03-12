@@ -1,4 +1,15 @@
 {
-  "date": "JUNE 23, 2024 - BRAŞOV, ROMANIA",
-  "time-left": "{{days}} DAYS TO GO!"
+  "hero-title": "We're getting married!",
+  "time-left": "{{days}} DAYS TO GO!",
+  "card-title": "DANCE, DANCE, DANCE!",
+  "card-text": "It is our pleasure to invite you to our wedding celebration this summer!",
+  "where": "Where?",
+  "when": "When?",
+  "city-country": "Braşov, Romania",
+  "hour": "4:00PM - ?",
+  "hour2": "4:00PM (Romanian time)",
+  "date": "June 23rd, 2024",
+  "wedding-schedule": "Wedding schedule",
+  "wedding-details": "Party starts at 4 - eating throughout",
+  "menu": "4-course menu"
 }

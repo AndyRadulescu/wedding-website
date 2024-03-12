@@ -9,18 +9,17 @@
         <h2 class="text-2xl">DANCE, DANCE, DANCE!</h2>
       </div>
       <div>
-        <p class="text-sm leading-none text-justify">It is our pleasure to invite you to our wedding
-          celebration this summer!</p>
+        <p class="text-sm leading-none text-justify">{{ 'card-text' | transloco }}</p>
       </div>
       <div class="my-10 w-80 border-t border-gray-800"></div>
       <div class="flex flex-row justify-around w-full">
         <div class="flex-1 flex-col">
           <div class="flex flex-row">
             <img class="mr-2" ngSrc="assets/images/wedding-location.png" height="28" width="28" alt="location">
-            <h3 class="text-xl">Where?</h3>
+            <h3 class="text-xl">{{ 'where' | transloco }}</h3>
           </div>
           <p>Serenity Resort, Codlea</p>
-          <p>Braşov, Romania</p>
+          <p>{{ 'city-country' | transloco }}</p>
         </div>
         <div class="flex h-full items-center">
           <div class="w-2 h-2 circle bg-gray-800"></div>
@@ -28,10 +27,10 @@
         <div class="flex-1 flex-col text-end">
           <div class="flex flex-row justify-end">
             <img class="mr-2" ngSrc="assets/images/clock.png" height="28" width="28" alt="location">
-            <h3 class="text-xl">When?</h3>
+            <h3 class="text-xl">{{ 'when' | transloco }}</h3>
           </div>
-          <p>4:00PM - ?</p>
-          <p>June 23rd, 2024</p>
+          <p>{{ 'hour' | transloco }}</p>
+          <p>{{ 'date' | transloco }}</p>
         </div>
       </div>
       <div class="my-10 w-80 border-t border-gray-800"></div>
@@ -39,10 +38,10 @@
         <div class="mb-10">
           <img ngSrc="assets/images/cheers.png" height="50" width="50" alt="dance image">
         </div>
-        <h2 class="text-3xl">ᐧ Wedding schedule ᐧ</h2>
-        <h2 class="text-xl">4:00PM (Romanian time)</h2>
-        <p class="text-md">Starting at 4PM - open END</p>
-        <p class="text-sm">4-course menu</p>
+        <h2 class="text-3xl">ᐧ {{ 'wedding-schedule' | transloco }} ᐧ</h2>
+        <h2 class="text-xl">{{ 'hour2' | transloco }}</h2>
+        <p class="text-md">{{ 'wedding-details' | transloco }}</p>
+        <p class="text-sm">- {{ 'menu' | transloco }} -</p>
       </div>
     </div>
   </div>
