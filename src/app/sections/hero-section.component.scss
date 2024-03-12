@@ -3,5 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100svh;
+  scale: 1.1;
+  z-index: 0;
+  object-fit: cover;
 }
