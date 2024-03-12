@@ -3,7 +3,31 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  scale: 1.1;
-  z-index: 0;
-  object-fit: cover;
+  scale: 1;
+  z-index: -1;
+  animation: hero-image-animation linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
+
+}
+
+.header-content {
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes hero-image-animation {
+  25% {
+    opacity: 1
+  }
+  85%, 100% {
+    opacity: 0; scale: 3;
+  }
 }
