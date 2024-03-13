@@ -4,11 +4,12 @@ import {HeroSectionComponent} from "./sections/hero-section.component";
 import {CardInvitationComponent} from "./sections/card-invitation.component";
 import {FooterComponent} from "./sections/footer.component";
 import {PhotoSectionComponent} from "./sections/photo-section.component";
+import {RsvpComponent} from "./sections/rsvp.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroSectionComponent, CardInvitationComponent, FooterComponent, PhotoSectionComponent],
+  imports: [RouterOutlet, HeroSectionComponent, CardInvitationComponent, FooterComponent, PhotoSectionComponent, RsvpComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
