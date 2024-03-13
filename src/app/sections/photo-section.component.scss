@@ -1,9 +1,15 @@
-.item-1 {
-  grid-row: 1 / 7;
-  grid-column: 2 / 7;
-}
 
-.item-2 {
-  grid-row: 4 / 9;
-  grid-column: 5 / 10;
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("/assets/images/sunset.jpg");
+
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    height: 500px;
+    background-attachment: fixed;
+  }
 }
