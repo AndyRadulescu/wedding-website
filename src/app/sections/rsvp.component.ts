@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import {NgClass, NgOptimizedImage} from "@angular/common";
 import {CardComponent} from "../components/card.component";
 import {FormControl, FormGroup, MinLengthValidator, ReactiveFormsModule, Validators} from "@angular/forms";
 import {SwitchComponent} from "../components/switch.component";
@@ -11,7 +11,8 @@ import {SwitchComponent} from "../components/switch.component";
     NgOptimizedImage,
     CardComponent,
     ReactiveFormsModule,
-    SwitchComponent
+    SwitchComponent,
+    NgClass
   ],
   templateUrl: './rsvp.component.html',
   styleUrl: './rsvp.component.scss'
@@ -29,6 +30,9 @@ export class RsvpComponent {
   protected readonly onsubmit = onsubmit;
 
   public onSubmit() {
+    if (this.rsvpForm.invalid) {
+      console.log('invalid');
+    }
     console.log(this.rsvpForm.value)
   }
 }

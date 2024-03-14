@@ -1,33 +1,41 @@
 <app-card>
-  <div class="grid md:grid-cols-2 gap-5 w-full md:p-5">
-    <form class="max-w-[90%] md:max-w-[95%] w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
+  <div class="grid md:grid-cols-2 gap-5 w-full">
+    <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
       <div>
         <div>
-          <label for="your-name" class="block text-sm font-medium text-gray-700">Name</label>
+          <label for="your-name" class="block text-sm font-medium text-gray-700"
+                 [ngClass]="{'text-red-600':rsvpForm.controls.name.errors && rsvpForm.controls.name.touched}">Name</label>
           <input
             [formControl]="rsvpForm.controls.name"
             class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]" id="your-name"
+            [ngClass]="{'text-red-600':rsvpForm.controls.name.errors && rsvpForm.controls.name.touched}"
             name="your-name" type="text" placeholder="" value="">
         </div>
         <div class="mt-4">
-          <label for="email-address" class="block text-sm font-medium text-gray-700">Email</label>
+          <label for="email-address" class="block text-sm font-medium text-gray-700"
+                 [ngClass]="{'text-red-600':rsvpForm.controls.email.errors && rsvpForm.controls.email.touched}">Email</label>
           <input
             [formControl]="rsvpForm.controls.email"
             class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
+            [ngClass]="{'text-red-600':rsvpForm.controls.email.errors && rsvpForm.controls.email.touched}"
             id="email-address" name="email-address" autocomplete="email" type="email" value="">
         </div>
         <div class="mt-4">
-          <label for="whatsapp-address" class="block text-sm font-medium text-gray-700">WhatsApp</label>
+          <label for="whatsapp-address" class="block text-sm font-medium text-gray-700"
+                 [ngClass]="{'text-red-600':rsvpForm.controls.phoneNumber.errors && rsvpForm.controls.phoneNumber.touched}">WhatsApp</label>
           <input
             [formControl]="rsvpForm.controls.phoneNumber"
             class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-            id="whatsapp-address" name="whatsapp-address" autocomplete="whatsapp" type="tel" value="">
+            [ngClass]="{'text-red-600':rsvpForm.controls.phoneNumber.errors && rsvpForm.controls.phoneNumber.touched}"
+            id="whatsapp-address" inputmode="numeric" name="whatsapp-address" autocomplete="whatsapp" type="tel" value="">
         </div>
         <div class="mt-4">
-          <app-switch title="Are you bringing a plus one?" text="If you are, please let us know their name." [formControl]="rsvpForm.controls.plus1"></app-switch>
+          <app-switch title="Are you bringing a plus one?" text="If you are, please let us know their name."
+                      [formControl]="rsvpForm.controls.plus1"></app-switch>
         </div>
         <div class="mt-4">
-          <app-switch title="Are you bringing kids?" text="If you are, please let us know their names and ages." [formControl]="rsvpForm.controls.kids"></app-switch>
+          <app-switch title="Are you bringing kids?" text="If you are, please let us know their names and ages."
+                      [formControl]="rsvpForm.controls.kids"></app-switch>
         </div>
         <div class="mt-4">
           <label class="block text-sm font-medium text-gray-700" id="headlessui-listbox-label-:r8:"
