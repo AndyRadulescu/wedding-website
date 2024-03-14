@@ -5,11 +5,13 @@ import {CardInvitationComponent} from "./sections/card-invitation.component";
 import {FooterComponent} from "./sections/footer.component";
 import {PhotoSectionComponent} from "./sections/photo-section.component";
 import {RsvpComponent} from "./sections/rsvp.component";
+import {AdditionalInfoComponent} from "./sections/aditional-info/additional-info.component";
+import {CountdownComponent} from "./sections/countdown/countdown.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroSectionComponent, CardInvitationComponent, FooterComponent, PhotoSectionComponent, RsvpComponent],
+  imports: [RouterOutlet, HeroSectionComponent, CardInvitationComponent, FooterComponent, PhotoSectionComponent, RsvpComponent, AdditionalInfoComponent, CountdownComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
