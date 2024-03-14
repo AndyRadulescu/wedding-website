@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {AdditionalItemComponent} from "../components/additional-item.component";
 
 @Component({
   selector: 'app-additional-info',
   standalone: true,
-  imports: [],
+  imports: [
+    AdditionalItemComponent
+  ],
   templateUrl: './additional-info.component.html',
   styleUrl: './additional-info.component.scss'
 })
