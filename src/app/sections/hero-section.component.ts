@@ -14,5 +14,8 @@ import {LanguageSelectorComponent} from "../components/language-selector.compone
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-
+  public scrollTo() {
+    let el = document.getElementById('rsvp-section');
+    el?.scrollIntoView({behavior: "smooth"});
+  }
 }
