@@ -1,5 +1,8 @@
 <app-card>
   <div class="grid md:grid-cols-2 gap-5 w-full">
+    <div class="flex flex-col items-center justify-center h-full bg-gray-200">
+      <img ngSrc="assets/images/dance.png" height="50" width="50" alt="wedding image">
+    </div>
     <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
       <div>
         <div>
@@ -9,7 +12,7 @@
             [formControl]="rsvpForm.controls.name"
             class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]" id="your-name"
             [ngClass]="{'text-red-600':rsvpForm.controls.name.errors && rsvpForm.controls.name.touched}"
-            name="your-name" type="text" placeholder="" value="">
+            name="your-name" type="text" autocomplete="name" placeholder="" value="">
         </div>
         <div class="mt-4">
           <label for="email-address" class="block text-sm font-medium text-gray-700"
@@ -27,47 +30,55 @@
             [formControl]="rsvpForm.controls.phoneNumber"
             class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
             [ngClass]="{'text-red-600':rsvpForm.controls.phoneNumber.errors && rsvpForm.controls.phoneNumber.touched}"
-            id="whatsapp-address" inputmode="numeric" name="whatsapp-address" autocomplete="whatsapp" type="tel" value="">
+            id="whatsapp-address" inputmode="numeric" name="whatsapp-address" autocomplete="tel" type="tel"
+            value="">
         </div>
         <div class="mt-4">
           <app-switch title="Are you bringing a plus one?" text="If you are, please let us know their name."
                       [formControl]="rsvpForm.controls.plus1"></app-switch>
+          <div *ngIf="rsvpForm.controls.plus1.value === true">
+            <label for="name-plus1" class="block text-sm font-medium text-gray-700 mt-2">Name</label>
+            <input [formControl]="rsvpForm.controls.plus1Name"
+                   class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
+                   id="name-plus1" name="info" type="text" value="">
+          </div>
         </div>
         <div class="mt-4">
           <app-switch title="Are you bringing kids?" text="If you are, please let us know their names and ages."
                       [formControl]="rsvpForm.controls.kids"></app-switch>
-        </div>
-        <div class="mt-4">
-          <label class="block text-sm font-medium text-gray-700" id="headlessui-listbox-label-:r8:"
-                 data-headlessui-state="">Do you have any dietary restrictions?</label>
-          <div class="mt-1 relative">
-            <button
-              class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm ltr:pl-3 rtl:pr-3 ltr:pr-10 rtl:pl-10 py-2 ltr:text-left rtl:text-right cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-              id="headlessui-listbox-button-:r9:" type="button" aria-haspopup="listbox" aria-expanded="false"
-              data-headlessui-state="" aria-labelledby="headlessui-listbox-label-:r8: headlessui-listbox-button-:r9:">
-              <span class="block truncate">Select dietary restrictions</span><span
-              class="absolute inset-y-0 ltr:right-0 rtl:left-0 flex items-center ltr:pr-2 rtl:pl-2 pointer-events-none"><svg
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 text-gray-400"><path
-              stroke-linecap="round" stroke-linejoin="round"
-              d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path></svg></span></button>
+          <div *ngIf="rsvpForm.controls.kids.value === true">
+            <label for="name-kids" class="block text-sm font-medium text-gray-700 mt-2">Names and ages</label>
+            <input [formControl]="rsvpForm.controls.kidsName"
+                   class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
+                   id="name-kids"
+                   name="info" type="text" value="">
           </div>
         </div>
         <div class="mt-4">
-          <label for="info" class="block text-sm font-medium text-gray-700">Anything else we should
-            know?</label>
-          <input
-            class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]" id="info"
-            name="info" type="text" value="">
+          <label class="block text-sm font-medium text-gray-700 mb-2" id="headlessui-listbox-label-:r8:"
+                 data-headlessui-state="">Do you have any dietary restrictions?</label>
+          <select id="countries" class="bg-gray-200 border-gray-200 placeholder-gray-200 text-gray-900 focus:outline-none
+            focus:ring-1 focus:ring-indigo-300 focus:border-indigo-300 border text-sm rounded-lg block w-full p-2.5"
+                  [formControl]="rsvpForm.controls.diet"
+          >
+            <option selected value="none">Select dietary restriction</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Gluten">Gluten Free</option>
+            <option value="Kosher">Kosher</option>
+          </select>
+        </div>
+        <div class="mt-4">
+          <label for="info" class="block text-sm font-medium text-gray-700">Anything else we should know?</label>
+          <input [formControl]="rsvpForm.controls.anythingElse"
+                 class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]" id="info"
+                 name="info" type="text" value="">
         </div>
       </div>
       <button type="submit"
-              class="w-full mb-4 md:mb-0 mt-6 bg-gray-200 border border-transparent shadow-sm py-2 px-4 text-sm font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main-tint">
+              class="w-full mb-4 md:mb-0 mt-6 bg-gray-200 border border-transparent shadow-sm py-2 px-4 text-sm
+              font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main-tint">
         Submit
       </button>
     </form>
-    <div class="flex flex-col items-center justify-center h-full bg-gray-200">
-      <img ngSrc="assets/images/dance.png" height="50" width="50" alt="wedding image">
-    </div>
   </div>
 </app-card>
