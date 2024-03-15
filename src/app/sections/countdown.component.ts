@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.scss'
 })
-export class CountdownComponent {
+export class CountdownComponent implements OnInit{
+    ngOnInit(): void {
+        throw new Error('Method not implemented.');
+    }
 
 }
