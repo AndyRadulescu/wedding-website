@@ -10,19 +10,19 @@
       <div>
         <div class="grid grid-cols-4 divide-x divide-x-black/10">
           <div class="flex items-center justify-center gap-2 flex-col">
-            <div class="text-2xl md:text-5xl">75</div>
+            <div class="text-2xl md:text-5xl">{{ timeUntil.days }}</div>
             <div class="mt-1 text-[16px] md:text-lg text-main">Days</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
-            <div class="text-2xl md:text-5xl text-main-green">18</div>
+            <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.hours }}</div>
             <div class="mt-1 text-[16px] md:text-lg text-main">Hours</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
-            <div class="text-2xl md:text-5xl text-main-green">10</div>
+            <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.minutes }}</div>
             <div class="mt-1 text-[16px] md:text-lg text-main">Minutes</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
-            <div class="text-2xl md:text-5xl text-main-green">24</div>
+            <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.seconds }}</div>
             <div class="mt-1 text-[16px] md:text-lg text-main">Seconds</div>
           </div>
         </div>

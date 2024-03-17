@@ -1,8 +1,8 @@
-import {timeUntil} from "./time-until";
+import {timeUntil} from './time-until';
 
 
 const weddingDate = new Date(2024, 6, 23, 16, 0, 0, 0);
-describe("Time until", () => {
+describe('Time until', () => {
   it('should get the time until 23 June 2024 from one moth prior', () => {
     const date = new Date(2024, 6, 0, 0, 0, 0);
     jasmine.clock().mockDate(date);
@@ -92,4 +92,4 @@ describe("Time until", () => {
       timeUntil(weddingDate)
     ).toEqual({days: 0, hours: 0, minutes: 0, seconds: 0});
   });
-})
+});

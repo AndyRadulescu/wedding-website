@@ -3,6 +3,13 @@ const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
 
+export interface TimeUntil {
+  days: number,
+  hours: number,
+  minutes: number,
+  seconds: number
+}
+
 export const timeUntil = (futureDate: Date) => {
   const now = new Date();
   const distance = futureDate.getTime() - now.getTime();
