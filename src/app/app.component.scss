@@ -2,3 +2,13 @@ $backgroundColor: rgb(31 41 55);
 .gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .2)), $backgroundColor;
 }
+
+.cool-image {
+  background-image: url("../assets/images/cool-background.svg");
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.cool-svg {
+  position: absolute;
+}

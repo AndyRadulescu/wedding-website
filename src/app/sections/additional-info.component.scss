@@ -12,7 +12,9 @@
 }
 
 .items:hover {
-  .items-slide {
-    animation-play-state: paused;
+  @media (min-width: 768px) {
+    .items-slide {
+      animation-play-state: paused;
+    }
   }
 }
