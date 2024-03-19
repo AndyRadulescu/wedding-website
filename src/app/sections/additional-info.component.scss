@@ -8,7 +8,10 @@
 }
 
 .items-slide {
-  animation: 35s slide infinite linear;
+  animation: 75s slide infinite linear;
+  @media (min-width: 768px) {
+    animation: 35s slide infinite linear;
+  }
 }
 
 .items:hover {
