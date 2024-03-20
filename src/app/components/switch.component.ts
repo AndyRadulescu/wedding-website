@@ -21,6 +21,8 @@ export class SwitchComponent implements ControlValueAccessor, AfterViewInit {
 
   @ViewChild('checkboxEl', {static: true}) checkboxEl!: ElementRef;
 
+  public value = false;
+
   ngAfterViewInit(): void {
     this.checkboxEl.nativeElement.checked = this.value;
   }
@@ -29,8 +31,6 @@ export class SwitchComponent implements ControlValueAccessor, AfterViewInit {
   };
   private onTouched = () => {
   };
-
-  public value = false;
 
   public onChecked($event: Event) {
     const val = ($event.target as any).checked

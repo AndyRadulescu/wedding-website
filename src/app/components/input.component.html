@@ -1,0 +1,13 @@
+<div>
+  <label for="your-name" class="block text-sm font-medium text-gray-700"
+         [ngClass]="{'text-red-600':inputValue.errors && inputValue.touched}">Name</label>
+  <input
+    [ngModel]="inputText"
+    (ngModelChange)="onTextChange($event)"
+    #inputValue="ngModel"
+    class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
+    id="your-name"
+    [disabled]="isDisabled"
+    [ngClass]="{'text-red-600':inputValue.errors && inputValue.touched}"
+    name="your-name" type="text" autocomplete="name" placeholder="" value="">
+</div>
