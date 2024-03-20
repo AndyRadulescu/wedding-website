@@ -6,7 +6,7 @@
 }
 
 @supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference), (min-width: 768px) {
+  @media (prefers-reduced-motion: no-preference) {
     .hero-image {
       animation: hero-image-animation linear forwards;
       animation-timeline: view();

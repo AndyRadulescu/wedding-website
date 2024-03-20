@@ -1,10 +1,15 @@
 <section class="flex justify-center mb-20 md:mb-40 -mt-20 text-gray-800">
   <div
-    class="flex justify-center w-full md:w-9/12 max-w-[90%] md:max-w-4xl shadow-md bg-white shadow-white/50 p-6">
+    class="flex justify-center w-full md:w-9/12 max-w-[90%] md:max-w-4xl shadow-md bg-white shadow-white/50 px-6 md:py-6">
     <div class="grid md:grid-cols-2 gap-5 w-full">
-      <div class="flex flex-col items-center justify-center h-full bg-gray-200">
-        <img ngSrc="assets/images/dance.png" height="50" width="50" alt="wedding image">
+      <div class="flex flex-col items-center justify-center h-full background-image -mx-6 md:mx-0 py-40">
+        <h1 class="text-5xl fancy-text">RSVP</h1>
+        <div class="mx-auto text-center text-main text-lg max-w-[250px] px-2 mt-10">
+          <h1 class="text-xl">Please confirm your attendance prior to <span
+            class="underline">1<sup>st</sup> of June</span></h1>
+        </div>
       </div>
+
       <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
         <div>
           <div>
