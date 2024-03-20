@@ -26,6 +26,7 @@ export class DietSelectorComponent implements ControlValueAccessor, AfterViewIni
     const val = ($event.target as any).value;
     this.value = val;
     this.onChange(val);
+    this.onTouched();
   }
 
   ngAfterViewInit(): void {

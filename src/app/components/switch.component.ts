@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, forwardRef, Input, ViewChild} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'app-switch',
@@ -27,15 +27,11 @@ export class SwitchComponent implements ControlValueAccessor, AfterViewInit {
     this.checkboxEl.nativeElement.checked = this.value;
   }
 
-  private onChange = (value: boolean) => {
-  };
-  private onTouched = () => {
-  };
-
   public onChecked($event: Event) {
-    const val = ($event.target as any).checked
+    const val = ($event.target as any).checked;
     this.value = val;
-    this.onChange(val)
+    this.onChange(val);
+    this.onTouched();
   }
 
   writeValue(value: boolean): void {
@@ -43,10 +39,16 @@ export class SwitchComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   registerOnChange(fn: any): void {
-    this.onChange = fn
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
   }
+
+  private onChange = (value: boolean) => {
+  };
+
+  private onTouched = () => {
+  };
 }

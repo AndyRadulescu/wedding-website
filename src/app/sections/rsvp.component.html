@@ -12,36 +12,19 @@
 
       <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
         <div>
-          <app-input [formControl]="rsvpForm.controls.name"></app-input>
-          <div class="mt-4">
-            <label for="email-address" class="block text-sm font-medium text-gray-700"
-                   [ngClass]="{'text-red-600':rsvpForm.controls.email.errors && rsvpForm.controls.email.touched}">Email</label>
-            <input
-              [formControl]="rsvpForm.controls.email"
-              class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-              [ngClass]="{'text-red-600':rsvpForm.controls.email.errors && rsvpForm.controls.email.touched}"
-              id="email-address" name="email-address" autocomplete="email" type="email" value="">
-          </div>
-          <div class="mt-4"
-               [ngClass]="{'text-red-600':rsvpForm.controls.phoneNumber.errors && rsvpForm.controls.phoneNumber.touched}">
-            <label for="whatsapp-address" class="block text-sm font-medium text-gray-700">WhatsApp</label>
-            <input
-              [formControl]="rsvpForm.controls.phoneNumber"
-              class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-              id="whatsapp-address" inputmode="numeric" name="whatsapp-address" autocomplete="tel" type="tel"
-              value="">
-          </div>
+          <app-input [formControlInput]="rsvpForm.controls.name" [displayText]="'Name'" type="text"
+                     autocomplete="name"></app-input>
+          <app-input [formControlInput]="rsvpForm.controls.email" [displayText]="'Email'" type="email-address"
+                     autocomplete="email"></app-input>
+          <app-input [formControlInput]="rsvpForm.controls.phoneNumber" [displayText]="'Phone number'"
+                     inputmode="numeric" type="tel" placeholder="+40 735 432 132" autocomplete="tel"></app-input>
           <app-diet-selector [formControl]="rsvpForm.controls.myDiet"></app-diet-selector>
-
           <div class="mt-4">
             <app-switch title="Are you bringing a plus one?" text="If you are, please let us know their name."
                         [formControl]="rsvpForm.controls.plus1Enabled"></app-switch>
             <div *ngIf="rsvpForm.controls.plus1Enabled.value === true">
-              <label for="name-plus1" class="block text-sm font-medium text-gray-700 mt-2">Name</label>
-              <input [formControl]="rsvpForm.controls.plus1.controls.plus1Name"
-                     class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-                     [ngClass]="{'text-red-600':rsvpForm.controls.plus1.controls.plus1Name.errors && rsvpForm.controls.plus1.controls.plus1Name.touched}"
-                     id="name-plus1" name="info" type="text" value="">
+              <app-input [formControlInput]="rsvpForm.controls.plus1.controls.plus1Name"
+                         [displayText]="'Name'" type="text" autocomplete="name"></app-input>
               <app-diet-selector [formControl]="rsvpForm.controls.plus1.controls.plus1Diet"></app-diet-selector>
             </div>
           </div>
@@ -49,22 +32,13 @@
             <app-switch title="Are you bringing kids?" text="If you are, please let us know their names and ages."
                         [formControl]="rsvpForm.controls.kidsEnabled"></app-switch>
             <div *ngIf="rsvpForm.controls.kidsEnabled.value === true">
-              <label for="name-kids" class="block text-sm font-medium text-gray-700 mt-2">Names and ages</label>
-              <input [formControl]="rsvpForm.controls.kids.controls.kidsName"
-                     class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-                     [ngClass]="{'text-red-600':rsvpForm.controls.kids.controls.kidsName.errors && rsvpForm.controls.kids.controls.kidsName.touched}"
-                     id="name-kids"
-                     name="info" type="text" value="">
+              <app-input [formControlInput]="rsvpForm.controls.kids.controls.kidsName"
+                         [displayText]="'Names + ages'" type="text" autocomplete="name"></app-input>
               <app-diet-selector [formControl]="rsvpForm.controls.kids.controls.kidsDiet"></app-diet-selector>
             </div>
           </div>
-          <div class="mt-4">
-            <label for="info" class="block text-sm font-medium text-gray-700">Anything else we should know?</label>
-            <input [formControl]="rsvpForm.controls.anythingElse"
-                   class="outline-none w-full block bg-transparent border-b border-b-black/10 py-2 pr-[0.3rem]"
-                   id="info"
-                   name="info" type="text" value="">
-          </div>
+          <app-input [formControlInput]="rsvpForm.controls.anythingElse"
+                     [displayText]="'Anything else'" type="text"></app-input>
         </div>
         <button type="submit"
                 class="w-full mb-4 md:mb-0 mt-6 bg-gray-200 border border-transparent shadow-sm py-2 px-4 text-sm
