@@ -13,11 +13,3 @@
     animation: 35s slide infinite linear;
   }
 }
-
-@media (min-width: 768px) {
-  .items:hover {
-    .items-slide {
-      animation-play-state: paused;
-    }
-  }
-}
