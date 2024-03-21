@@ -23,7 +23,7 @@ import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 export class DietSelectorComponent implements ControlValueAccessor, AfterViewInit {
   public value = false;
 
-  @ViewChild('dietSelect', {static: true}) dietSelect!: ElementRef;
+  @ViewChild('dietSelect', {static: true}) dietSelect!: ElementRef<HTMLInputElement>;
 
   public onSelectItem($event: Event) {
     const val = ($event.target as any).value;

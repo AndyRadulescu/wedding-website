@@ -32,5 +32,28 @@
       "vegetarian": "Vegetarian",
       "kosher": "Kosher"
     }
+  },
+  "additionalInfo": {
+    "title": "Additional information",
+    "card1": {
+      "title": "Some Title",
+      "description": "The Lorenz venue is located just an hour away from Vienna, and is well connected by road and rail"
+    },
+    "card2": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card3": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card4": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card5": {
+      "title": "Some Title",
+      "description": "some description"
+    }
   }
 }

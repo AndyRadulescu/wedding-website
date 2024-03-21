@@ -1,12 +1,12 @@
-<div class="mt-4" *transloco="let t;">
+<div class="mt-4">
   <label class="block text-sm font-medium text-gray-700 mb-2" for="plus1-diet"
-         data-headlessui-state="">{{ t('rsvp.diet.title') }}</label>
+         data-headlessui-state="">{{ 'rsvp.diet.title' | transloco }}</label>
   <select #dietSelect id="plus1-diet" class="bg-gray-200 border-gray-200 placeholder-gray-200 text-gray-900 focus:outline-none
             focus:ring-1 focus:ring-indigo-300 focus:border-indigo-300 border text-sm rounded-lg block w-full p-2.5"
           (change)="onSelectItem($event)"
   >
-    <option selected value="none">{{ t('rsvp.diet.default') }}</option>
-    <option value="vegetarian">{{ t('rsvp.diet.vegetarian') }}</option>
-    <option value="kosher">{{ t('rsvp.diet.kosher') }}</option>
+    <option selected value="none">{{ 'rsvp.diet.default' | transloco }}</option>
+    <option value="vegetarian">{{ 'rsvp.diet.vegetarian' | transloco }}</option>
+    <option value="kosher">{{ 'rsvp.diet.kosher' | transloco }}</option>
   </select>
 </div>

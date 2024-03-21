@@ -32,7 +32,7 @@ export class RsvpComponent implements OnInit, OnDestroy {
     email: new FormControl<string>('', [Validators.email, Validators.required]),
     phoneNumber: new FormControl<string>('', [Validators.min(6), Validators.required]),
     myDiet: new FormControl<string | null>('none', []),
-    plus1Enabled: new FormControl<boolean>({value: false, disabled: true}, [Validators.required]),
+    plus1Enabled: new FormControl<boolean>(false, [Validators.required]),
     plus1: new FormGroup({
       plus1Name: new FormControl<string>({value: '', disabled: true}, [Validators.required]),
       plus1Diet: new FormControl<string | null>({value: 'none', disabled: true}, []),
@@ -40,7 +40,6 @@ export class RsvpComponent implements OnInit, OnDestroy {
     kidsEnabled: new FormControl<boolean>(false, [Validators.required]),
     kids: new FormGroup({
       kidsName: new FormControl<string>({value: '', disabled: true}, [Validators.required]),
-      kidsDiet: new FormControl<string | null>({value: 'none', disabled: true}, []),
     }),
     anythingElse: new FormControl<string>('', []),
   });

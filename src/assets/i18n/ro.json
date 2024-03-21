@@ -32,6 +32,29 @@
       "description": "Daca da, te rog spune-ne numele si vârstele",
       "names+ages": "Nume si vârste"
     }
+  },
+  "additionalInfo": {
+    "title": "Informații adiționale",
+    "card1": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card2": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card3": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card4": {
+      "title": "Some Title",
+      "description": "some description"
+    },
+    "card5": {
+      "title": "Some Title",
+      "description": "some description"
+    }
   }
 }
 
