@@ -1,11 +1,14 @@
 import {AfterViewInit, Component, ElementRef, forwardRef, ViewChild} from '@angular/core';
 import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-diet-selector',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    TranslocoPipe,
+    TranslocoDirective
   ],
   providers: [
     {

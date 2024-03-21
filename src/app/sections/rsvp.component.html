@@ -10,35 +10,34 @@
         </div>
       </div>
 
-      <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
+      <form class="w-full mx-auto text-main" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()" *transloco="let t;">
         <div>
-          <app-input [formControlInput]="rsvpForm.controls.name" [displayText]="'Name'" type="text"
+          <app-input [formControlInput]="rsvpForm.controls.name" [displayText]="t('rsvp.name')" type="text"
                      autocomplete="name"></app-input>
           <app-input [formControlInput]="rsvpForm.controls.email" [displayText]="'Email'" type="email-address"
                      autocomplete="email"></app-input>
-          <app-input [formControlInput]="rsvpForm.controls.phoneNumber" [displayText]="'Phone number'"
+          <app-input [formControlInput]="rsvpForm.controls.phoneNumber" [displayText]="t('rsvp.phone')"
                      inputmode="numeric" type="tel" placeholder="+40 735 432 132" autocomplete="tel"></app-input>
           <app-diet-selector [formControl]="rsvpForm.controls.myDiet"></app-diet-selector>
           <div class="mt-4">
-            <app-switch title="Are you bringing a plus one?" text="If you are, please let us know their name."
+            <app-switch [title]="t('rsvp.plus1.title')" [text]="t('rsvp.plus1.description')"
                         [formControl]="rsvpForm.controls.plus1Enabled"></app-switch>
             <div *ngIf="rsvpForm.controls.plus1Enabled.value === true">
               <app-input [formControlInput]="rsvpForm.controls.plus1.controls.plus1Name"
-                         [displayText]="'Name'" type="text" autocomplete="name"></app-input>
+                         [displayText]="t('rsvp.name')" type="text" autocomplete="name"></app-input>
               <app-diet-selector [formControl]="rsvpForm.controls.plus1.controls.plus1Diet"></app-diet-selector>
             </div>
           </div>
           <div class="mt-4">
-            <app-switch title="Are you bringing kids?" text="If you are, please let us know their names and ages."
+            <app-switch [title]="t('rsvp.kids.title')" [text]="t('rsvp.kids.description')"
                         [formControl]="rsvpForm.controls.kidsEnabled"></app-switch>
             <div *ngIf="rsvpForm.controls.kidsEnabled.value === true">
               <app-input [formControlInput]="rsvpForm.controls.kids.controls.kidsName"
-                         [displayText]="'Names + ages'" type="text" autocomplete="name"></app-input>
-              <app-diet-selector [formControl]="rsvpForm.controls.kids.controls.kidsDiet"></app-diet-selector>
+                         [displayText]="t('rsvp.kids.names+ages')" type="text" autocomplete="name"></app-input>
             </div>
           </div>
           <app-input [formControlInput]="rsvpForm.controls.anythingElse"
-                     [displayText]="'Anything else'" type="text"></app-input>
+                     [displayText]="t('rsvp.anythingElse')" type="text"></app-input>
         </div>
         <button type="submit"
                 class="w-full mb-4 md:mb-0 mt-6 bg-gray-200 border border-transparent shadow-sm py-2 px-4 text-sm

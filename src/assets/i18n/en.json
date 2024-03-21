@@ -11,5 +11,25 @@
   "date": "June 23rd, 2024",
   "wedding-schedule": "Wedding schedule",
   "wedding-details": "Party starts at 4 - eating throughout",
-  "menu": "4-course menu"
+  "menu": "4-course menu",
+  "rsvp": {
+    "name": "Name",
+    "phone": "Phone",
+    "anythingElse": "Anything else? (food alergies)",
+    "plus1": {
+      "title": "Are you bringing a plus 1",
+      "description": "If you are, please let us know their name!"
+    },
+    "kids": {
+      "title": "Are you bringing kids",
+      "description": "If you are, please let us know their names and ages1",
+      "names+ages": "Names + ages"
+    },
+    "diet": {
+      "title": "What kind of menu preference do you have?",
+      "default": "No preference",
+      "vegetarian": "Vegetarian",
+      "kosher": "Kosher"
+    }
+  }
 }

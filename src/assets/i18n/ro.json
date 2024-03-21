@@ -11,6 +11,26 @@
   "date": "23 iunie, 2024",
   "wedding-schedule": "Programul nunții",
   "wedding-details": "Rave party de la 4 pana dimineața!",
-  "menu": "meniu cu 4 feluri"
+  "menu": "meniu cu 4 feluri",
+  "rsvp": {
+    "name": "Nume",
+    "phone": "Telefon",
+    "diet": {
+      "title": "Ce meniu preferi?",
+      "default": "Clasic",
+      "vegetarian": "Vegetarian",
+      "kosher": "Fară porc"
+    },
+    "anythingElse": "Altceva? (alergii culinare)",
+    "plus1": {
+      "title": "Vii cu cineva?",
+      "description": "Daca da, te rog spune-ne numele!"
+    },
+    "kids": {
+      "title": "Vii cu copii?",
+      "description": "Daca da, te rog spune-ne numele si vârstele",
+      "names+ages": "Nume si vârste"
+    }
+  }
 }
 

@@ -6,6 +6,7 @@ import {SwitchComponent} from '../components/switch.component';
 import {Subject, takeUntil} from 'rxjs';
 import {DietSelectorComponent} from '../components/diet-selector.component';
 import {InputComponent} from '../components/input.component';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-rsvp',
@@ -18,7 +19,9 @@ import {InputComponent} from '../components/input.component';
     NgClass,
     NgIf,
     DietSelectorComponent,
-    InputComponent
+    InputComponent,
+    TranslocoPipe,
+    TranslocoDirective
   ],
   templateUrl: './rsvp.component.html',
   styleUrl: './rsvp.component.scss'
