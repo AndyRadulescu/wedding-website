@@ -1,5 +1,5 @@
 {
-  "hero-title": "Gata aşteptarea, mulțumim babele!",
+  "hero-title": "Diana & Andy",
   "time-left": "ÎNCǍ {{days}} DE ZILE!",
   "card-title": "HAI LA DANS!",
   "card-text": "Este plǎcerea noastarǎ sa va invitǎm sa petrecți alǎturi de noi, cu ocazia unirii celor douǎ familii prin nunta noastrǎ ",
@@ -13,6 +13,7 @@
   "wedding-details": "Rave party de la 4 pana dimineața!",
   "menu": "meniu cu 4 feluri",
   "rsvp": {
+    "confirm": "Te rog confirmă prezența <span class='underline'>până la 1 iunie</span>",
     "name": "Nume",
     "phone": "Telefon",
     "diet": {

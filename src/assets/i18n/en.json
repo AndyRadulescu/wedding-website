@@ -13,6 +13,7 @@
   "wedding-details": "Party starts at 4 - eating throughout",
   "menu": "4-course menu",
   "rsvp": {
+    "confirm": "Please confirm your attendance prior to <span class='underline'>1<sup>st</sup> of June</span>",
     "name": "Name",
     "phone": "Phone",
     "anythingElse": "Anything else? (food alergies)",
