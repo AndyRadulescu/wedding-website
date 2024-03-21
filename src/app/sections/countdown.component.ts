@@ -1,11 +1,14 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {timeUntil, TimeUntil} from '../utils/time-until';
 import {interval, startWith, Subject, takeUntil} from 'rxjs';
+import {TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-countdown',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslocoPipe
+  ],
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.scss'
 })

@@ -2,28 +2,28 @@
   <div class="relative max-w-4xl mx-auto text-white">
     <div class="flex flex-col items-center justify-center h-full">
       <div class="mt-2 w-full"><span
-        class="text-4xl w-max mx-auto text-main-yellow flex items-center relative fancy-text">Stay tuned!</span>
+        class="text-4xl w-max mx-auto text-main-yellow flex items-center relative fancy-text">{{ 'countdown.stayTuned' | transloco }}</span>
       </div>
       <h2 class="mt-4 text-3xl md:text-5xl font-medium"><span
-        class="block text-center text-main-green">Time until the best wedding ever</span></h2></div>
+        class="block text-center text-main-green">{{ 'countdown.timeUntil' | transloco }}</span></h2></div>
     <div class="mt-12 max-w-lg mx-auto lg:max-w-none">
       <div>
         <div class="grid grid-cols-4 divide-x divide-x-black/10">
           <div class="flex items-center justify-center gap-2 flex-col">
             <div class="text-2xl md:text-5xl">{{ timeUntil.days }}</div>
-            <div class="mt-1 text-[16px] md:text-lg text-main">Days</div>
+            <div class="mt-1 text-[16px] md:text-lg text-main">{{ 'countdown.days' | transloco }}</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
             <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.hours }}</div>
-            <div class="mt-1 text-[16px] md:text-lg text-main">Hours</div>
+            <div class="mt-1 text-[16px] md:text-lg text-main">{{ 'countdown.hr' | transloco }}</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
             <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.minutes }}</div>
-            <div class="mt-1 text-[16px] md:text-lg text-main">Minutes</div>
+            <div class="mt-1 text-[16px] md:text-lg text-main">{{ 'countdown.mins' | transloco }}</div>
           </div>
           <div class="flex items-center justify-center gap-2 flex-col">
             <div class="text-2xl md:text-5xl text-main-green">{{ timeUntil.seconds }}</div>
-            <div class="mt-1 text-[16px] md:text-lg text-main">Seconds</div>
+            <div class="mt-1 text-[16px] md:text-lg text-main">{{ 'countdown.secs' | transloco }}</div>
           </div>
         </div>
       </div>

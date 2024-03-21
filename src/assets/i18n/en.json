@@ -55,5 +55,18 @@
       "title": "Some Title",
       "description": "some description"
     }
+  },
+  "countdown": {
+    "stayTuned": "Stay tuned!",
+    "timeUntil": "Time until the best wedding ever",
+    "days":"Days",
+    "hr":"Hours",
+    "mins":"Minutes",
+    "secs":"Seconds"
+  },
+  "footer": {
+    "callUs": "Call us",
+    "textUs": "Text us",
+    "emailUs": "E-mail us"
   }
 }

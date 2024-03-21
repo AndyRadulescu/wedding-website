@@ -55,6 +55,19 @@
       "title": "Some Title",
       "description": "some description"
     }
+  },
+  "countdown": {
+    "stayTuned": "Fii pe fază!",
+    "timeUntil": "Cât mai e până la ce mai tare nuntă",
+    "days":"Zile",
+    "hr":"Ore",
+    "mins":"Minute",
+    "secs":"Secunde"
+  },
+  "footer": {
+    "callUs": "Sună-ne",
+    "textUs": "Scrie-ne",
+    "emailUs": "E-mailul nostru"
   }
 }
 
