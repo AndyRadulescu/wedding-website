@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {NgClass, NgIf, NgOptimizedImage} from '@angular/common';
+import {CommonModule, NgClass, NgIf, NgOptimizedImage} from '@angular/common';
 import {CardComponent} from '../components/card.component';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {SwitchComponent} from '../components/switch.component';
@@ -7,6 +7,8 @@ import {Subject, takeUntil} from 'rxjs';
 import {DietSelectorComponent} from '../components/diet-selector.component';
 import {InputComponent} from '../components/input.component';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {collection, getFirestore} from 'firebase/firestore';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-rsvp',
@@ -21,12 +23,27 @@ import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
     DietSelectorComponent,
     InputComponent,
     TranslocoPipe,
-    TranslocoDirective
+    TranslocoDirective,
+  ],
+  animations: [
+    trigger(
+      'myAnimation', [
+        transition(':enter', [
+          style({transform: 'translateX(100%)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateX(0)', 'opacity': 1}),
+          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
+        ])
+      ]
+    )
   ],
   templateUrl: './rsvp.component.html',
   styleUrl: './rsvp.component.scss'
 })
 export class RsvpComponent implements OnInit, OnDestroy {
+  public isSubmitted = false;
   public rsvpForm = new FormGroup({
     name: new FormControl<string>('', [Validators.minLength(3), Validators.required]),
     email: new FormControl<string>('', [Validators.email, Validators.required]),
@@ -43,9 +60,14 @@ export class RsvpComponent implements OnInit, OnDestroy {
     }),
     anythingElse: new FormControl<string>('', []),
   });
-  protected readonly onsubmit = onsubmit;
 
+  private readonly colRef;
   private subscription = new Subject<void>();
+
+  constructor() {
+    const db = getFirestore();
+    this.colRef = collection(db, 'rsvp');
+  }
 
   ngOnInit(): void {
     this.rsvpForm.get('plus1Enabled')?.valueChanges.pipe(takeUntil(this.subscription)).subscribe((change) => {
@@ -60,11 +82,12 @@ export class RsvpComponent implements OnInit, OnDestroy {
     this.subscription.next();
   }
 
-
   public onSubmit() {
     if (this.rsvpForm.invalid) {
       console.log('invalid');
+      return;
     }
-    console.log(this.rsvpForm.value);
+    this.isSubmitted = true;
+    // void addDoc(this.colRef, this.rsvpForm.value);
   }
 }
