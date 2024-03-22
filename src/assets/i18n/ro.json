@@ -16,6 +16,7 @@
     "confirm": "Te rog confirmă prezența <span class='underline'>până la 1 iunie</span>",
     "name": "Nume",
     "phone": "Telefon",
+    "submit": "Trimite",
     "diet": {
       "title": "Ce meniu preferi?",
       "default": "Clasic",

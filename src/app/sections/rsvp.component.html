@@ -2,8 +2,8 @@
   <div
     class="flex justify-center w-full md:w-9/12 max-w-[90%] md:max-w-4xl shadow-md bg-white shadow-white/50 px-6 md:py-6">
     <div class="grid md:grid-cols-2 gap-5 w-full">
-      <div class="flex flex-col items-center justify-center h-full background-image -mx-6 md:mx-0 py-40">
-        <h1 class="text-5xl fancy-text">RSVP</h1>
+      <div class="flex flex-col items-center justify-center h-full -mx-6 md:mx-0 py-40 bg-orange-50">
+        <h1 class="text-5xl fancy-text">- RSVP -</h1>
         <div class="mx-auto text-center text-main text-lg max-w-[250px] px-2 mt-10">
           <h1 class="text-xl" [innerHTML]="'rsvp.confirm' | transloco"></h1>
         </div>
@@ -40,9 +40,9 @@
                        [displayText]="t('rsvp.anythingElse')" type="text"></app-input>
           </div>
           <button type="submit"
-                  class="w-full mb-4 md:mb-0 mt-6 bg-gray-200 border border-transparent shadow-sm py-2 px-4 text-sm
-              font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main-tint">
-            Submit
+                  class="w-full mb-4 md:mb-0 mt-6 bg-orange-50 border border-transparent shadow-sm py-2 px-4 text-sm
+              font-medium text-black hover:bg-orange-100 ring-amber-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main-tint">
+            {{ t('rsvp.submit') }}
           </button>
         </form>
       </ng-container>

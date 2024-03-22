@@ -16,6 +16,7 @@
     "confirm": "Please confirm your attendance prior to <span class='underline'>1<sup>st</sup> of June</span>",
     "name": "Name",
     "phone": "Phone",
+    "submit": "Submit",
     "anythingElse": "Anything else? (food alergies)",
     "plus1": {
       "title": "Are you bringing a plus 1",
