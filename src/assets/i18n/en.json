@@ -37,24 +37,24 @@
   "additionalInfo": {
     "title": "Additional information",
     "card1": {
-      "title": "Some Title",
-      "description": "The Lorenz venue is located just an hour away from Vienna, and is well connected by road and rail"
+      "title": "Accommodation",
+      "description": "We suggest getting accommodation in Braşov and commute to the wedding location. Braşov is a much nicer city than Codlea and the drive by car takes 15 minutes."
     },
     "card2": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Transportation",
+      "description": "Forget about taking the public transportation! Either take an uber (usually quite cheap) or rent a car."
     },
     "card3": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "About the party",
+      "description": "The party starts at 4PM. Dancing non-stop. The meals will be served and when you wish you could take a break."
     },
     "card4": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "When to go home",
+      "description": "There's no time limit. The romanians party quite hard as you'll see. Please note that the Ubers might be harder to find at 4Am :)"
     },
     "card5": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Gifts",
+      "description": "While personal gifts of household or sentimental pieces are greatly appreciated we are currently saving for our future home and would appreciate monetary gifts."
     }
   },
   "countdown": {

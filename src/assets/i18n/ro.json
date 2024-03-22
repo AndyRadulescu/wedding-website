@@ -37,24 +37,24 @@
   "additionalInfo": {
     "title": "Informații adiționale",
     "card1": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Despre Braşov",
+      "description": "Brașovul este unul dintre cele mai frumoase orașe din România, deci merită explorat! Recomandăm cu tăria Biserica Neagra si chiar un hike de Tâmpa!"
     },
     "card2": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Despre nuntă",
+      "description": "Ne propunem o nuntă modernă care va începe la 16:00 si se va termina târziu in noapte. Muzica o sa fie diversificată."
     },
     "card3": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Cum ajungeți acolo",
+      "description": "Localul este puțin în afara orașului Codlea si la 15 minute de Brașov. Se poate ajuge foarte ușor cu mașina!"
     },
     "card4": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Creat",
+      "description": "Ceremonia de cununie civilă atat cât si cea religioasâ nu vor avea loc în ziua cu petrecerea."
     },
     "card5": {
-      "title": "Some Title",
-      "description": "some description"
+      "title": "Despre noi",
+      "description": "Suntem fericiți si abia așteptăm petrecerea, să ne distrăm impreună cu voi!"
     }
   },
   "countdown": {
