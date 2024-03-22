@@ -1,7 +1,9 @@
 
 .parallax {
-  /* The image used */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("/assets/images/sunset.jpg");
+  @media (min-width: 764px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("/assets/images/sunset.jpg");
+  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/images/kiss.jpg");
 
   height: 400px;
   background-position: center;
