@@ -1,0 +1,9 @@
+.box:after {
+  background: linear-gradient(90deg, #e8deab, #cbb480);
+  bottom: -.5em;
+  content: "";
+  height: .5em;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
