@@ -1,10 +1,13 @@
 {
   "hero-title": "Diana & Andy",
   "time-left": "ÎNCǍ {{days}} DE ZILE!",
-  "card-title": "HAI LA DANS!",
-  "card-text": "Este plǎcerea noastarǎ sa va invitǎm sa petrecți alǎturi de noi, cu ocazia unirii celor douǎ familii prin nunta noastrǎ ",
-  "where": "Unde?",
-  "when": "Cand?",
+  "card": {
+    "title": "HAI LA DANS!",
+    "text": "Vă invităm cu placere la nunta noastră",
+    "seeYouThere": "Ne vedem acolo",
+    "dateAndLocation": "23 IUNIE, ORA 16:00 - Serenity Resort Codlea, România",
+    "confirm": "Va rugăm sa confirmați prezența pana pâmă la 1 iunie"
+  },
   "city-country": "Braşov, România",
   "hour": "16:00 - ?",
   "hour2": "16:00",

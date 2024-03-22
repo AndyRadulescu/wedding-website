@@ -7,3 +7,11 @@
   position: absolute;
   width: 100%;
 }
+
+@media (min-width: 764px) {
+  .flower-background {
+    background-image: url("../../assets/images/frame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
