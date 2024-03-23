@@ -8,10 +8,11 @@
   width: 100%;
 }
 
-@media (min-width: 764px) {
-  .flower-background {
+.flower-background {
+  @media(min-width: 764px) {
     background-image: url("../../assets/images/frame.png");
-    background-size: cover;
-    background-repeat: no-repeat;
   }
+  background-image: url("../../assets/images/frame-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
