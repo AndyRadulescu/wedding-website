@@ -28,3 +28,7 @@ select {
   -moz-appearance: none;
   -ms-appearance: none;
 }
+
+.d.ng-star-inserted {
+  display: none !important;
+}

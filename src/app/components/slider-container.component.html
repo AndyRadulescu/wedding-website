@@ -1,7 +1,24 @@
-<div class="flex flex-row" *transloco="let t;">
-  <app-additional-item [title]="t('additionalInfo.card1.title')" [content]="t('additionalInfo.card1.description')"></app-additional-item>
-  <app-additional-item [title]="t('additionalInfo.card2.title')" [content]="t('additionalInfo.card2.description')"></app-additional-item>
-  <app-additional-item [title]="t('additionalInfo.card3.title')" [content]="t('additionalInfo.card3.description')"></app-additional-item>
-  <app-additional-item [title]="t('additionalInfo.card4.title')" [content]="t('additionalInfo.card4.description')"></app-additional-item>
-  <app-additional-item [title]="t('additionalInfo.card5.title')" [content]="t('additionalInfo.card5.description')"></app-additional-item>
+<div *transloco="let t;">
+  <ngx-tcarousel [itemCount]="5" [showHandles]="false" [interval]="2000">
+    <div class="carousel-cell">
+      <app-additional-item [title]="t('additionalInfo.card1.title')"
+                           [content]="t('additionalInfo.card1.description')"></app-additional-item>
+    </div>
+    <div class="carousel-cell">
+      <app-additional-item [title]="t('additionalInfo.card1.title')"
+                           [content]="t('additionalInfo.card1.description')"></app-additional-item>
+    </div>
+    <div class="carousel-cell">
+      <app-additional-item [title]="t('additionalInfo.card1.title')"
+                           [content]="t('additionalInfo.card1.description')"></app-additional-item>
+    </div>
+    <div class="carousel-cell">
+      <app-additional-item [title]="t('additionalInfo.card1.title')"
+                           [content]="t('additionalInfo.card1.description')"></app-additional-item>
+    </div>
+    <div class="carousel-cell">
+      <app-additional-item [title]="t('additionalInfo.card1.title')"
+                           [content]="t('additionalInfo.card1.description')"></app-additional-item>
+    </div>
+  </ngx-tcarousel>
 </div>
