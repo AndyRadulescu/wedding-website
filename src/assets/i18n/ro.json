@@ -6,14 +6,10 @@
     "text": "Vă invităm cu placere la nunta noastră",
     "seeYouThere": "Ne vedem acolo",
     "dateAndLocation": "23 IUNIE, ORA 16:00 - Serenity Resort Codlea, România",
-    "confirm": "Va rugăm sa confirmați prezența pana pâmă la 1 iunie"
+    "ceremony": "Ceremonia",
+    "time": "Începând cu 4 - fară oră de plecare",
+    "menu": "Meniu in 4 feluri"
   },
-  "city-country": "Braşov, România",
-  "hour": "16:00 - ?",
-  "hour2": "16:00",
-  "date": "23 iunie, 2024",
-  "wedding-schedule": "Programul nunții",
-  "wedding-details": "Rave party de la 4 pana dimineața!",
   "menu": "meniu cu 4 feluri",
   "rsvp": {
     "confirm": "Te rog confirmă prezența <span class='underline'>până la 1 iunie</span>",
