@@ -11,17 +11,11 @@
       animation: hero-image-animation linear forwards;
       animation-timeline: view();
       animation-range: exit;
-      -webkit-animation: hero-image-animation linear forwards;
-      -webkit-animation-timeline: view();
-      -webkit-animation-range: exit;
     }
     .header-content {
       animation: fade-out linear;
-      -webkit-animation: fade-out linear;
       animation-timeline: view();
-      -webkit-animation-timeline: view();
       animation-range: exit;
-      -webkit-animation-range: exit;
     }
     @keyframes fade-out {
       75%, 100% {
