@@ -10,7 +10,7 @@
       </div>
 
       <ng-container>
-        <form class="w-full mx-auto text-main relative" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()"
+        <form class="w-full mx-auto text-main relative flex flex-col justify-between" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()"
               *transloco="let t;">
           <div *ngIf="isSubmitted" class="w-full h-full absolute bg-white z-20 flex flex-col justify-center"
                [@divAnimation]>
@@ -34,7 +34,6 @@
                           [formControl]="rsvpForm.controls.coming"></app-switch>
             </div>
             <div *ngIf="rsvpForm.controls.coming.value === true">
-              <app-diet-selector [formControl]="rsvpForm.controls.plus1.controls.plus1Diet"></app-diet-selector>
               <app-diet-selector [formControl]="rsvpForm.controls.myDiet"></app-diet-selector>
               <div class="mt-4">
                 <app-switch [title]="t('rsvp.plus1.title')" [text]="t('rsvp.plus1.description')"
@@ -58,8 +57,8 @@
             </div>
           </div>
           <button type="submit" [@buttonAnimation]
-                  class="w-full mb-4 md:mb-0 mt-6 bg-orange-50 border border-transparent shadow-sm py-2 px-4 text-sm
-              font-medium text-black hover:bg-orange-100 ring-amber-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main-tint">
+                  class="w-full mb-4 md:mb-0 mt-6 bg-orange-50 shadow-sm py-2 px-4 text-sm
+              font-medium text-black hover:bg-orange-100 focus:outline-none">
             {{ t('rsvp.submit') }}
           </button>
         </form>

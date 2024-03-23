@@ -7,7 +7,7 @@ import {Subject, takeUntil} from 'rxjs';
 import {DietSelectorComponent} from '../components/diet-selector.component';
 import {InputComponent} from '../components/input.component';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
-import {collection, getFirestore} from 'firebase/firestore';
+import {addDoc, collection, getFirestore} from 'firebase/firestore';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -29,13 +29,13 @@ import {animate, style, transition, trigger} from '@angular/animations';
     trigger(
       'divAnimation', [
         transition(':enter', [
-          style({transform: 'translateX(-200px)', width:0, opacity: 0}),
+          style({transform: 'translateX(-200px)', width: 0, opacity: 0}),
           animate('500ms', style({transform: 'translateX(0)', width: '100%', opacity: 1}))
         ]),
       ]
     ),
     trigger(
-      'buttonAnimation',[
+      'buttonAnimation', [
         transition(':leave', [
           style({transform: 'translateY(0)', height: '0', 'opacity': 1}),
           animate('500ms', style({transform: 'translateY(-500px)', height: '100%', opacity: 0}))
@@ -86,11 +86,12 @@ export class RsvpComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit() {
+    this.rsvpForm.controls.name.markAsTouched();
     if (this.rsvpForm.invalid) {
       console.log('invalid');
       return;
     }
     this.isSubmitted = true;
-    // void addDoc(this.colRef, this.rsvpForm.value);
+    void addDoc(this.colRef, this.rsvpForm.value);
   }
 }
