@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 body {
   font-family: "GFS Didot", serif;
@@ -10,18 +8,10 @@ body {
   font-style: normal;
 }
 
-.section-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
-}
-
 .fancy-text {
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-}
-
-.circle {
-  border-radius: 50%;
 }
 
 select {
@@ -31,6 +21,38 @@ select {
   -ms-appearance: none;
 }
 
-.d.ng-star-inserted {
-  display: none !important;
+@media (max-width: 784px) {
+  .d.ng-star-inserted {
+    display: none !important;
+  }
 }
+
+.d.ng-star-inserted {
+  .carousel {
+    display: none;
+  }
+
+  button {
+    border: none;
+    backdrop-filter: blur(10px);
+  }
+
+  .flip {
+    stroke-width: 4px;
+    border-radius: 40px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 90px;
+
+    &.next {
+      right: 0;
+    }
+
+    &.prev {
+      left: 0;
+    }
+  }
+}
+

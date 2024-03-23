@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {AdditionalItemComponent} from './additional-item.component';
 import {TranslocoDirective} from '@ngneat/transloco';
-import {CarouselModule} from 'ngx-owl-carousel-o';
+import { NgxTCarouselComponent } from 'ngx-tcarousel';
 
 @Component({
   selector: 'app-slider-container',
@@ -9,10 +9,11 @@ import {CarouselModule} from 'ngx-owl-carousel-o';
   imports: [
     AdditionalItemComponent,
     TranslocoDirective,
-    CarouselModule
+    NgxTCarouselComponent
   ],
   templateUrl: './slider-container.component.html',
   styleUrl: './slider-container.component.scss'
 })
 export class SliderContainerComponent {
+
 }
