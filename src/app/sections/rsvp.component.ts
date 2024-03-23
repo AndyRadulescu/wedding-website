@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CommonModule, NgClass, NgIf, NgOptimizedImage} from '@angular/common';
+import {NgClass, NgIf, NgOptimizedImage} from '@angular/common';
 import {CardComponent} from '../components/card.component';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {SwitchComponent} from '../components/switch.component';
@@ -27,14 +27,18 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ],
   animations: [
     trigger(
-      'myAnimation', [
+      'divAnimation', [
         transition(':enter', [
-          style({transform: 'translateX(100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+          style({transform: 'translateX(-200px)', width:0, opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', width: '100%', opacity: 1}))
         ]),
+      ]
+    ),
+    trigger(
+      'buttonAnimation',[
         transition(':leave', [
-          style({transform: 'translateX(0)', 'opacity': 1}),
-          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
+          style({transform: 'translateY(0)', height: '0', 'opacity': 1}),
+          animate('500ms', style({transform: 'translateY(-500px)', height: '100%', opacity: 0}))
         ])
       ]
     )
@@ -46,8 +50,7 @@ export class RsvpComponent implements OnInit, OnDestroy {
   public isSubmitted = false;
   public rsvpForm = new FormGroup({
     name: new FormControl<string>('', [Validators.minLength(3), Validators.required]),
-    email: new FormControl<string>('', [Validators.email, Validators.required]),
-    phoneNumber: new FormControl<string>('', [Validators.min(6), Validators.required]),
+    coming: new FormControl<boolean>(true, [Validators.required]),
     myDiet: new FormControl<string | null>('none', []),
     plus1Enabled: new FormControl<boolean>(false, [Validators.required]),
     plus1: new FormGroup({

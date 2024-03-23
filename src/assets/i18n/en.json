@@ -20,6 +20,12 @@
     "phone": "Phone",
     "submit": "Submit",
     "anythingElse": "Anything else? (food alergies)",
+    "seeYou": "Awesome! See you there! 🚀",
+    "cancel": "We are sorry you couldn't make it! 😞",
+    "coming": {
+      "title": "Are you coming to the wedding?",
+      "description": "If yes, pls complete the form"
+    },
     "plus1": {
       "title": "Are you bringing a plus 1",
       "description": "If you are, please let us know their name!"

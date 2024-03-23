@@ -16,6 +16,12 @@
     "name": "Nume",
     "phone": "Telefon",
     "submit": "Trimite",
+    "seeYou": "Blană! Ne vedem la nuntă! 🚀",
+    "cancel": "Ne pare rău ca nu ați putut ajunge! 😞",
+    "coming": {
+      "title": "Vii la nuntă?",
+      "description": "Dacă da, completează formul"
+    },
     "diet": {
       "title": "Ce meniu preferi?",
       "default": "Clasic",
