@@ -9,6 +9,7 @@ import {InputComponent} from '../components/input.component';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 import {addDoc, collection, getFirestore} from 'firebase/firestore';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {getAnalytics, logEvent} from 'firebase/analytics';
 
 @Component({
   selector: 'app-rsvp',
@@ -65,11 +66,14 @@ export class RsvpComponent implements OnInit, OnDestroy {
   });
 
   private readonly colRef;
+  private readonly analytics;
   private subscription = new Subject<void>();
 
   constructor() {
     const db = getFirestore();
     this.colRef = collection(db, 'rsvp');
+
+    this.analytics = getAnalytics();
   }
 
   ngOnInit(): void {
@@ -93,5 +97,8 @@ export class RsvpComponent implements OnInit, OnDestroy {
     }
     this.isSubmitted = true;
     void addDoc(this.colRef, this.rsvpForm.value);
+    logEvent(this.analytics, 'submitted', {
+      coming: this.rsvpForm.controls.coming.value
+    });
   }
 }
